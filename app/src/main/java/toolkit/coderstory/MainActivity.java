@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.didikee.donate.AlipayDonate;
+//import android.didikee.donate.AlipayDonate;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -105,9 +105,9 @@ public class MainActivity extends AppCompatActivity {
         ((Switch) $(R.id.zipauthcreak)).setChecked(getPrefs().getBoolean("zipauthcreak", false));
         ((Switch) $(R.id.downgrade)).setChecked(getPrefs().getBoolean("downgrade", true));
         ((Switch) $(R.id.hideicon)).setChecked(getPrefs().getBoolean("hideIcon", false));
-        $(R.id.alipay).setOnClickListener(view ->
-                donateAlipay()
-        );
+//        $(R.id.alipay).setOnClickListener(view ->
+//                donateAlipay()
+//        );
 
         if (!getPrefs().getBoolean("isRooted", false)) {
             // 检测弹窗
@@ -177,10 +177,10 @@ public class MainActivity extends AppCompatActivity {
         return prefs;
     }
 
-    private void donateAlipay() {
-        boolean hasInstalledAlipayClient = AlipayDonate.hasInstalledAlipayClient(MainActivity.this);
-        if (hasInstalledAlipayClient) {
-            AlipayDonate.startAlipayClient(MainActivity.this, "FKX03884EYVUJKBZLWQTFA");
-        }
-    }
+//    private void donateAlipay() {
+//        boolean hasInstalledAlipayClient = AlipayDonate.hasInstalledAlipayClient(MainActivity.this);
+//        if (hasInstalledAlipayClient) {
+//            AlipayDonate.startAlipayClient(MainActivity.this, "FKX03884EYVUJKBZLWQTFA");
+//        }
+//    }
 }
